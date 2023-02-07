@@ -3,7 +3,8 @@ languageCode = 'en-us'
 title = 'TuttoCampo'
 theme = ["github.com/Allan-Nava/Hugo-TuttoCampo"]
 resourceDir = "../resources"
-
+contentDir = "content"
+#
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
