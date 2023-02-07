@@ -1,6 +1,6 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://allan-nava.github.io/Hugo-TuttoCampo/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'TuttoCampo'
 theme = ["github.com/Allan-Nava/Hugo-TuttoCampo"]
 resourceDir = "../resources"
 
