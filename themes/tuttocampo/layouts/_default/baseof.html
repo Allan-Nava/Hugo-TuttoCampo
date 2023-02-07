@@ -16,11 +16,6 @@
     {{ else }}
       <meta name="robots" content="noindex, nofollow">
     {{ end }}
-
-    {{ block "favicon" . }}
-      {{ partialCached "site-favicon.html" . }}
-    {{ end }}
-  
   </head>
   {{- partial "head.html" . -}}
   <body>
