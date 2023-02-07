@@ -55,6 +55,7 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
+            --baseURL https://allan-nava.github.io/Hugo-TuttoCampo\
             -t tuttocampo\
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
