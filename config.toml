@@ -15,7 +15,7 @@ enableRobotsTXT = true
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
-
+#
 [params]
   text_color = ""
   author = ""
@@ -31,3 +31,7 @@ enableRobotsTXT = true
     maxAge = "14h"
   [caches.getjson]
     maxAge = "14h"
+#
+[permalinks]
+  videos = '/:06/:title/' #:id/:title
+#
