@@ -1,5 +1,7 @@
 {{ $data := getJSON "https://api.tuttocampo.tv/api/v1/it/list?offset=0&order=date.desc&category=&tag=&championship=&group=&team=" }}
 
+{{% video %}}
+
 <div id="main-widgets">
     
     {{ range $data }}
@@ -15,3 +17,5 @@
         {{ end }}
     {{ end }}
 </div>
+
+{{% /video %}}
