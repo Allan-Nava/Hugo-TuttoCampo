@@ -8,10 +8,10 @@
         {{ if .items }}
         {{ if gt (len .items) 0 }}
             {{ if eq .widget "Slider" }}
-                {{< slider Object=$data >}}    
+                {{ < slider > Object=$data }}    
             {{ end }}
             {{ if eq .widget "HighlightCarousel"}}
-                {{< highlights Object=$data >}}    
+                {{ < highlights > Object=$data}}    
             {{ end if }}
         {{ end }}
         {{ end }}
