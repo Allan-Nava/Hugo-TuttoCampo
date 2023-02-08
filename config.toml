@@ -32,6 +32,7 @@ enableRobotsTXT = true
   [caches.getjson]
     maxAge = "14h"
 #
-[permalinks]
-  videos = '/:06/:title/' #:id/:title
+#[permalinks]
+#  videos = '/:06/:title/' 
+  #:id/:title
 #
