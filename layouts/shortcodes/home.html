@@ -3,7 +3,8 @@
 <div id="main-widgets">
     
     {{ range $data }}
-        {{ if (len .items) }}
+        {{ if .items }}
+        {{ if gt (len .items) 0 }}
         <div class="container-fluid">
             <div class="d-flex justify-content-between align-items-center hm-title-section-carousel">
                 <h3 class="bold white">{{.heading}}</h3>
@@ -37,7 +38,8 @@
                 </div>
             </div>
         </div>
-        {{ end }}    
+        {{ end }}   
+        {{ end }} 
     {{ end }}
 
 </div>
