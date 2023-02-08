@@ -28,6 +28,6 @@ enableRobotsTXT = true
 #
 [caches]
   [caches.getcsv]
-    maxAge = 
+    maxAge = "14h"
   [caches.getjson]
     maxAge = "14h"
