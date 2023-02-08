@@ -1,0 +1,83 @@
+<nav class="navbar hm-navbar fixed-top navbar-expand-lg navbar-light">
+    <a class="open_sidebar white d-lg-block d-none">
+        <div class="hamburger hamburger-1 hamburger_desk">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+    </a>
+    <button class="navbar-toggler hm-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger hamburger-1 hamburger_mob">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+    </button>
+    <a class="navbar-brand d-xl-block d-lg-none" href="">
+        <img src='{{ "img/tuttocampo-tv.svg" | absURL }}'>
+    </a>
+    <div class="d-xl-block d-none">
+        <ul class="navbar-nav hm-navbar-nav">
+            <li class="nav-item hm-nav-item ">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item hm-nav-item ">
+                <a class="nav-link" href="">Video</a>
+            </li>
+            <li class="d-lg-none d-block nav-item hm-nav-item hamburger_desk">
+                <a class="nav-link white semibold">Esplora</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse hm-navbar-collapse" id="navbarSupportedContent">
+        <div class="d-lg-none d-block">
+            <ul class="navbar-nav hm-navbar-nav">
+                <li class="nav-item hm-nav-item ">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item hm-nav-item ">
+                    <a class="nav-link" href="">Video</a>
+                </li>
+                <li class="d-lg-none d-block nav-item hm-nav-item hamburger_desk">
+                    <a class="nav-link white semibold">Esplora</a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom d-lg-none d-block">
+        </div>
+    </div>
+
+    {{- partial "explore.html" . -}}
+
+    <div class="hm-nav-right d-flex align-items-center">
+        <a class="white" href="" id="search">
+            <i class="fa fa-search"></i>
+        </a>
+    </div>
+</nav>
+<div class="d-md-none d-block">
+    <div class="d-none hm-user-menu">
+        <ul>
+            <li>
+                <a href="">
+                    <p class="semibold white"><i class="fas fa-cog green"></i>Impostazioni account</p>
+                </a>
+            </li>
+            <!-- {% comment %} <li>
+                <a href="{% url 'myVideo' %}">
+                    <p class="semibold white"><i class="fas fa-video green"></i>I miei video</p>
+                </a>
+            </li> {% endcomment %} -->
+            <li>
+                <a href="" id="logout">
+                    <p class="semibold white"><i class="fas fa-sign-out-alt green"></i>Esci</p>
+                </a>
+            </li>
+        </ul>
+        <div class="bottom">
+            <a class="close_user_menu">
+                <i class="far fa-times"></i>
+            </a>
+        </div>
+    </div>
+</div>
