@@ -6,7 +6,11 @@
     <section class="flex-ns flex-wrap justify-around mt5">
       {{ range .Paginator.Pages }}
         <div class="relative w-100 w-30-l mb4 bg-white">
+          <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
           {{ .Render "summary" }}
+          <div class="post-description">
+              {{ .Content }}
+          </div>
         </div>
       {{ end }}
     </section>
