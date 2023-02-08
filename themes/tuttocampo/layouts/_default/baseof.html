@@ -33,11 +33,15 @@
 
   </head> 
   <body>
+
     {{- partial "navbar.html" . -}}
+
     <div id="content" class="hm-content-all-page" >
-    {{- block "main" . }}{{- end }}
+      {{- block "main" . }}{{- end }}
     </div>
     {{- partial "footer.html" . -}}
+
+    {{- partial "extrascripts.html" . -}}
 
   </body>
 </html>
