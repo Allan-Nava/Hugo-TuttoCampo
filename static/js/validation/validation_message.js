@@ -1,5 +1,5 @@
 
-if (typeof(jQuery.validate) !== undefined) {
+/*if (typeof(jQuery.validate) !== undefined) {
     jQuery.extend(jQuery.validator.messages, { 
         required: T("$t(THIS FIELD IS REQUIRED)"),
         remote: T("$t(PLEASE FIX THIS FIELD)"),
@@ -17,4 +17,4 @@ if (typeof(jQuery.validate) !== undefined) {
         accept: T("$t(PLEASE ENTER A VALUE WITH A VALID EXTENSION)"),
         minlength: jQuery.validator.format(T("$t(PLEASE ENTER AT LEAST 6 CHARACTERS)"))
     });
-}
+}*/

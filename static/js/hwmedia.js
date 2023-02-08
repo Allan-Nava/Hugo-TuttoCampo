@@ -16,7 +16,7 @@ $(document).ready(function () {
         animated: 'fade',
         html: true 
     })
-    HWMedia.api.translation(window.lang, function(data) {
+    /*HWMedia.api.translation(window.lang, function(data) {
         $("[i18n]").each(function() {
             $(this).html(T($(this).html()))
         })
@@ -24,7 +24,7 @@ $(document).ready(function () {
         $("[i18n]").each(function() {
             $(this).html(T($(this).html()))
         })
-    });
+    });*/
 
     $(".hm-sidebar-overlay").on("click", function(e){
         $(".hm-sidebar").addClass("d-none");
@@ -59,7 +59,7 @@ $(document).ready(function () {
         e.preventDefault()
         var _this = $(this)
         var id_sport = _this.data("id")
-        HWMedia.api.championships_by_sport(1, function(data) {
+       /* HWMedia.api.championships_by_sport(1, function(data) {
             
             for(var i=0; i<data.data.length; i++){
                 var d = data.data[i]
@@ -69,7 +69,8 @@ $(document).ready(function () {
                 </li>`)
                 
             }
-        })
+        });
+        */
     })
 
     $(".open_explore").on("click", function (e) {
