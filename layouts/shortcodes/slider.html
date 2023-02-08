@@ -2,17 +2,17 @@
 
 {{ define "slider" }}
 <div class="hm-header-carousel hm-nav-carousel owl-carousel owl-theme">
-    {{ range .items }}
+    {{ range .Object.items }}
     <div class="item">
-        <div class="back-img-center" style="background-image: url('{{.background}}');">
+        <div class="back-img-center" style="background-image: url('{{.Object.background}}');">
             <div class="hm-gradient d-flex align-items-center">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-1">
-                            <h1 class="bold white">{{.title}}</h1>
-                            <h6 class="gray semibold">{{.subtitle}}</h6>
+                            <h1 class="bold white">{{.Object.title}}</h1>
+                            <h6 class="gray semibold">{{.Object.subtitle}}</h6>
                             <a href="{url}">
-                                {{ if .button}}
+                                {{ if .Object.button}}
                                 <button class="hm-button hm-button-live hm-button-live-green hm-button-whith-icon">
                                     <i class="fas fa-play-circle"></i>
                                     {{.text}}
