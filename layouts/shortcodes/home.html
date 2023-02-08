@@ -1,7 +1,6 @@
 {{ $data := getJSON "https://api.tuttocampo.tv/pages/it/it/home.json" }}
 
 <div id="main-widgets">
-    
     {{ range $data }}
         {{ if .items }}
         {{ if gt (len .items) 0 }}
@@ -41,5 +40,4 @@
         {{ end }}   
         {{ end }} 
     {{ end }}
-
 </div>

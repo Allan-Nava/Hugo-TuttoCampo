@@ -34,5 +34,4 @@ enableRobotsTXT = true
 #
 #[permalinks]
 #  videos = '/:06/:title/' 
-  #:id/:title
 #
