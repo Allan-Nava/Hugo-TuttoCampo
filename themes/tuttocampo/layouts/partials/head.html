@@ -2,9 +2,12 @@
 <script type="text/javascript" src='{{ "js/jquery.min.js" | absURL }}'></script>
 <script type="text/javascript" src='{{ "js/bootstrap.min.js" | absURL }}'></script>
 <!-- css -->
-<link rel="stylesheet" href='{{ "css/bootstrap.min.css" | absURL }}'>
+<!-- <link rel="stylesheet" href='{{ "css/bootstrap.min.css" | absURL }}'>
 <link rel="stylesheet" href='{{ "fonts/webfonts/all.min.css" | absURL }}' >
 <link rel="stylesheet" href='{{ "fonts/poppins/poppins.css" | absURL }}' >
 <link rel="stylesheet" href='{{ "css/owl.carousel.min.css" | absURL }}' >
 <link rel="stylesheet" href='{{ "css/owl.theme.default.min.css" | absURL }}' >
-<link rel="stylesheet" href='{{ "css/hwmedia.css" | absURL }}'>
+<link rel="stylesheet" href='{{ "css/hwmedia.css" | absURL }}'> -->
+<!-- -->
+{{ $css := resources.Get "css/hwmedia.css" "css/owl.theme.default.min.css" "css/owl.carousel.min.css" "fonts/poppins/poppins.css" "fonts/webfonts/all.min.css" "css/bootstrap.min.css"}}
+{{ $style := $css | resources.Minify }}
