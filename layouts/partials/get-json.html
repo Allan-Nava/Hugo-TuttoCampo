@@ -1,0 +1,14 @@
+<table>
+    <thead>
+      <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{ $url := "https://example.com/finance/employee-salaries.csv" }}
+    {{ $data := getJSON  $url }}
+    
+    </tbody>
+  </table>
