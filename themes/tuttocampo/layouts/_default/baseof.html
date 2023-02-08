@@ -32,16 +32,27 @@
     {{- partial "head.html" . -}}
 
   </head> 
-  <body>
+  <body class="{{ $.Param "body_class" }}">
+    <div id="loader-wrapper">
+      <div class="center-loader">
+          <div id="loader"></div>
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
 
     {{- partial "navbar.html" . -}}
 
-    <div id="content" class="hm-content-all-page" >
+    <div class="hm-content-all-page" >
       {{- block "main" . }}{{- end }}
     </div>
+
     {{- partial "footer.html" . -}}
 
     {{- partial "extrascripts.html" . -}}
+    {{ - block "extra_js" . }} {{- end }}
 
+    {{ - block "modal" . }} {{- end }}
+    
   </body>
 </html>
