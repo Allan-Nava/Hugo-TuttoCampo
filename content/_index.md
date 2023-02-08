@@ -6,4 +6,4 @@ layout: "videos"
 type: "videos"
 ---
 
-{{< video >}}
+{{ < video > }}

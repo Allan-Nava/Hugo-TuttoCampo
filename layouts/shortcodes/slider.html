@@ -1,4 +1,6 @@
 {{/* shortcode definition */}}
+
+{{ define "slider " }}
 <div class="hm-header-carousel hm-nav-carousel owl-carousel owl-theme">
     {{ range .Object.items }}
     <div class="item">
@@ -25,3 +27,4 @@
     </div>
     {{ end }}
 </div>
+{{ end }}
