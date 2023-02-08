@@ -19,5 +19,14 @@
     
     {{- partial "pagination.html" . -}}
 
-  </article>
+</article>
+
+{{ end }}
+
+{{ define "extra_js" }}
+<script>
+  $(document).ready(function(){
+    Loader.Done();
+  });
+</script>
 {{ end }}
