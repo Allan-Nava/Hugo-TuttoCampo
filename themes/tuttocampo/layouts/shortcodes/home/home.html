@@ -1,0 +1,12 @@
+{{ $data := getJSON "https://api.tuttocampo.tv/pages/it/it/home.json" }}
+
+<div id="main-widgets">
+    
+    {{ range $data }}
+    <li>
+        <strong>{{ .name }}</strong> - {{ .widgget }}
+        <br> {{ .items }}
+    </li>
+    {{ end }}
+
+</div>
