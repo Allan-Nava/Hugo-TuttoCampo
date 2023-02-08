@@ -8,80 +8,71 @@
         {{ if .items }}
         {{ if gt (len .items) 0 }}
             {{ if eq .widget "Slider" }}
-                {{< slider  Object=$data  >}}    
+            <div class="hm-header-carousel hm-nav-carousel owl-carousel owl-theme">
+                {{ range .items }}
+                <div class="item">
+                    <div class="back-img-center" style="background-image: url('{{.background}}');">
+                        <div class="hm-gradient d-flex align-items-center">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-8 offset-lg-1">
+                                        <h1 class="bold white">{{.title}}</h1>
+                                        <h6 class="gray semibold">{{.subtitle}}</h6>
+                                        <a href="{url}">
+                                            {{ if .button}}
+                                            <button class="hm-button hm-button-live hm-button-live-green hm-button-whith-icon">
+                                                <i class="fas fa-play-circle"></i>
+                                                {{.text}}
+                                            </button>
+                                            {{ end }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
             {{ end }}
             {{ if eq .widget "HighlightCarousel"}}
-                {{< highlights  Object=$data  >}}    
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center hm-title-section-carousel">
+                    <h3 class="bold white">{{.heading}}</h3>
+                    <div class="right">
+                        {{ if .view_all}}
+                            <a class="empty" href="{url}">
+                                <button class="hm-button hm-button-trasparent hm-button-small d-lg-block d-none">{{.text}} <i class="fas fa-chevron-double-right green visible-hover"></i></button>
+                                <i class="fas fa-chevron-right green d-lg-none d-block"></i>
+                            </a>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="hm-normal-carousel hm-nav-carousel owl-carousel owl-theme">
+                        {{ range .items }}
+                        <div class="item" data-index="1">
+                            <a href="">
+                                <div class="hm-card-event">
+                                    <div class="top back-img-16-9-center" style="background-image: url({{.image}});">
+                                        <i class="fas fa-play-circle"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p class="p3 semibold green">{{.subtitle}}</p>
+                                        <p class="p2 semibold white mb-0">{{.title}}</p>
+                                        <p class="p3 semibold gray uppercase">{{.category}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
             {{ end if }}
         {{ end }}
         {{ end }}
     {{ end }}
 </div>
 
-{{ end }}
-
-{{ define "slider " }}
-<div class="hm-header-carousel hm-nav-carousel owl-carousel owl-theme">
-    {{ range .Object.items }}
-    <div class="item">
-        <div class="back-img-center" style="background-image: url('{{.Object.background}}');">
-            <div class="hm-gradient d-flex align-items-center">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-1">
-                            <h1 class="bold white">{{.Object.title}}</h1>
-                            <h6 class="gray semibold">{{.Object.subtitle}}</h6>
-                            <a href="{url}">
-                                {{ if .Object.button}}
-                                <button class="hm-button hm-button-live hm-button-live-green hm-button-whith-icon">
-                                    <i class="fas fa-play-circle"></i>
-                                    {{.text}}
-                                </button>
-                                {{ end }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{ end }}
-</div>
-{{ end }}
-
-{{ define "highlights" }}
-
-<div class="container-fluid">
-    <div class="d-flex justify-content-between align-items-center hm-title-section-carousel">
-        <h3 class="bold white">{{.Object.heading}}</h3>
-        <div class="right">
-            {{ if .Object.view_all}}
-                <a class="empty" href="{url}">
-                    <button class="hm-button hm-button-trasparent hm-button-small d-lg-block d-none">{{.Object.text}} <i class="fas fa-chevron-double-right green visible-hover"></i></button>
-                    <i class="fas fa-chevron-right green d-lg-none d-block"></i>
-                </a>
-            {{ end }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="hm-normal-carousel hm-nav-carousel owl-carousel owl-theme">
-            {{ range .Object.items }}
-            <div class="item" data-index="1">
-                <a href="">
-                    <div class="hm-card-event">
-                        <div class="top back-img-16-9-center" style="background-image: url({{.Object.image}});">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
-                        <div class="content">
-                            <p class="p3 semibold green">{{.Object.subtitle}}</p>
-                            <p class="p2 semibold white mb-0">{{.Object.title}}</p>
-                            <p class="p3 semibold gray uppercase">{{.Object.category}}</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {{ end }}
-        </div>
-    </div>
-</div>
 {{ end }}
