@@ -9,7 +9,7 @@
                 <h3 class="bold white">{{.heading}}</h3>
                 <div class="right">
                     {{ if .view_all}}
-                        <a class="empty" href="{url}">
+                        <a class="empty" href="">
                             <button class="hm-button hm-button-trasparent hm-button-small d-lg-block d-none">{{.text}} <i class="fas fa-chevron-double-right green visible-hover"></i></button>
                             <i class="fas fa-chevron-right green d-lg-none d-block"></i>
                         </a>
@@ -20,7 +20,7 @@
                 <div class="hm-normal-carousel hm-nav-carousel owl-carousel owl-theme">
                     {{ range .items }}
                     <div class="item" data-index="1">
-                        <a href="">
+                        <a href="{{ .Site.BaseURL }}videos/{{.id}}">
                             <div class="hm-card-event">
                                 <div class="top back-img-16-9-center" style="background-image: url({{.image}});">
                                     <i class="fas fa-play-circle"></i>
