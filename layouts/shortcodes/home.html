@@ -4,7 +4,7 @@
     {{ range $data }}
         {{ if .items }}
         {{ if gt (len .items) 0 }}
-            {{.widget}}
+            <!-- {{.widget}} -->
             {{ if eq .widget "Slider" }}
             <div class="hm-header-carousel hm-nav-carousel owl-carousel owl-theme">
                 {{ range .items }}
