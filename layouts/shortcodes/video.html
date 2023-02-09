@@ -6,7 +6,7 @@
         {{ if gt (len .items) 0 }}
             <a href="">
                 <div class="hm-card-event">
-                    <div class="top back-img-16-9-center" style="background-image: url({{image}});">
+                    <div class="top back-img-16-9-center" style="background-image: url({{.image}});">
                         {{ if .live}}
                         <div class="hm-badge-live">
                             <p class="p3 white semibold uppercase">LIVE</p>
@@ -15,7 +15,7 @@
                         {{ if top_right_badge}}
                         <div class="hm-badge-top d-flex align-items-center">
                             <i class="fas fa-eye"></i>
-                            <p class="p3 white regular">{text}</p>
+                            <p class="p3 white regular">{{.text}}</p>
                         </div>
                         {{ end }}
                         <i class="fas fa-play-circle"></i>
