@@ -1,71 +1,45 @@
 {{ $data := getJSON "https://api.tuttocampo.tv/api/v1/it/list?offset=0&order=date.desc&category=&tag=&championship=&group=&team=" }}
 
-<div>
-    
+<div class="hm-main-slider-dots">
     {{ range $data.data.widgets }}
         {{ if .items }}
         {{ if gt (len .items) 0 }}
-            {{ if eq .widget "Slider" }}
-            <div class="hm-header-carousel hm-nav-carousel owl-carousel owl-theme">
-                {{ range .items }}
-                <div class="item">
-                    <div class="back-img-center" style="background-image: url('{{.background}}');">
-                        <div class="hm-gradient d-flex align-items-center">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-8 offset-lg-1">
-                                        <h1 class="bold white">{{.title}}</h1>
-                                        <h6 class="gray semibold">{{.subtitle}}</h6>
-                                        <a href="{url}">
-                                            {{ if .button}}
-                                            <button class="hm-button hm-button-live hm-button-live-green hm-button-whith-icon">
-                                                <i class="fas fa-play-circle"></i>
-                                                {{.text}}
-                                            </button>
-                                            {{ end }}
-                                        </a>
+            <a href="">
+                <div class="hm-card-event">
+                    <div class="top back-img-16-9-center" style="background-image: url({{image}});">
+                        {{ if .live}}
+                        <div class="hm-badge-live">
+                            <p class="p3 white semibold uppercase">LIVE</p>
+                        </div>
+                        {{ end }}
+                        {{ if top_right_badge}}
+                        <div class="hm-badge-top d-flex align-items-center">
+                            <i class="fas fa-eye"></i>
+                            <p class="p3 white regular">{text}</p>
+                        </div>
+                        {{ end }}
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="content">
+                        <div class="d-flex align-items-start">
+                            {{ if .logo_team}
+                                <div class="hm-logo-team">
+                                    <img src="{{.image}}">
+                                </div>
+                            {{ end }}
+                            <div>
+                                <div class="d-flex align-items-center info-result">
+                                    <div class="name-team">
+                                        <p class="p2 semibold white">{{.overtitle}}</p>
+                                        <p class="p2 semibold white">{{.title}}</p>
                                     </div>
                                 </div>
+                                <p class="p3 semibold gray">{{.subtitle}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                {{ end }}
-            </div>
-            {{ end }}
-            <div class="container-fluid">
-                <div class="d-flex justify-content-between align-items-center hm-title-section-carousel">
-                    <h3 class="bold white">{{.heading}}</h3>
-                    <div class="right">
-                        {{ if .view_all}}
-                            <a class="empty" href="{url}">
-                                <button class="hm-button hm-button-trasparent hm-button-small d-lg-block d-none">{{.text}} <i class="fas fa-chevron-double-right green visible-hover"></i></button>
-                                <i class="fas fa-chevron-right green d-lg-none d-block"></i>
-                            </a>
-                        {{ end }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="hm-normal-carousel hm-nav-carousel owl-carousel owl-theme">
-                        {{ range .items }}
-                        <div class="item" data-index="1">
-                            <a href="">
-                                <div class="hm-card-event">
-                                    <div class="top back-img-16-9-center" style="background-image: url({{.image}});">
-                                        <i class="fas fa-play-circle"></i>
-                                    </div>
-                                    <div class="content">
-                                        <p class="p3 semibold green">{{.subtitle}}</p>
-                                        <p class="p2 semibold white mb-0">{{.title}}</p>
-                                        <p class="p3 semibold gray uppercase">{{.category}}</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
+            </a>
         {{ end }}
         {{ end }}
     {{ end }}
