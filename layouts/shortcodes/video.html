@@ -1,8 +1,8 @@
 {{ $data := getJSON "https://api.tuttocampo.tv/api/v1/it/list?offset=0&order=date.desc&category=&tag=&championship=&group=&team=" }}
 
 <div>
-    {{ range $data }}
-        {{ .data }}
+    {{ $data }}
+    {{ range $data.data.widgets }}
         {{ if .items }}
         {{ if gt (len .items) 0 }}
             {{ if eq .widget "Slider" }}
