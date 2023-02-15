@@ -1,15 +1,35 @@
 {{ define "main" }}
   <article class="pa3 pa4-ns nested-copy-line-height">
+
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
       {{- .Content -}}
+
+      <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
+      
     </section>
+    
     <section class="flex-ns flex-wrap justify-around mt5">
       {{ range .Paginator.Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
+        <div class="relative w-100 w-30-l mb4 ">
+          <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
           {{ .Render "summary" }}
+          <div class="post-description">
+              {{ .Content }}
+          </div>
         </div>
       {{ end }}
     </section>
-    {{- template "_internal/pagination.html" . -}}
-  </article>
+    
+    {{- partial "pagination.html" . -}}
+
+</article>
+
+{{ end }}
+
+{{ define "extra_js" }}
+<script>
+  $(document).ready(function(){
+    Loader.Done();
+  });
+</script>
 {{ end }}

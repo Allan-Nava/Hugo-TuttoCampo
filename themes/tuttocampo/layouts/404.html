@@ -1,8 +1,22 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-    <article class="center cf pv5 measure-wide-l">
-      <h1>
-        This is not the page you were looking for
-      </h1>
-    </article>
+<div class="container-fluid" id="error">
+  <div class="row justify-content-center">
+      <div class="d-flex flex-column col-xl-4 col-lg-5 col-md-8 col-12 text-center align-items-center">
+          <h1 class="regular green tourney">404</h1>
+          <h5 class="bold mb-2" i18n>Oops! Non preoccuparti!</h5>
+         <h6 class="regular gray mb-40">Non riusciamo a trovare la pagina che stai cercando!</h6>
+          <button class="hm-button half-top-margin">Torna alla home</button>
+      </div>
+  </div>
+</div>
+{{ end }}
+
+
+{{ define "extra_js" }}
+<script>
+  $(document).ready(function(){
+    Loader.Done();
+  });
+</script>
 {{ end }}
