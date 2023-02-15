@@ -3,4 +3,7 @@
 
 ```
 hugo server -D -t tuttocampo
+
+#to run locally
+hugo server -D --baseURL https://allan-nava.github.io/Hugo-TuttoCampo -t tuttocampo
 ```
